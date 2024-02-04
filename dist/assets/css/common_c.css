@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+
+
+
+/***************************
+	reset
+***************************/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, select, input, textarea, button, p, blockquote, th, td{ margin:0; padding:0; font-size:100%; border:0; }
+html, body { height:100%; font-family:"NSKR-R", 돋움, Dotum, sans-serif; letter-spacing:-.25px; -webkit-text-size-adjust:none; -moz-text-size-adjust:none; -ms-text-size-adjust:none; text-size-adjust:none; }
+body { line-height:1; color:#000; background:#fff; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal; }
+ol, ul { list-style:none; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
+a { margin:0; padding:0; border:0; vertical-align:baseline; text-decoration:none; background:transparent; }
+/*strong { font-weight:normal; }*/
+em, i { font-style:normal; }
+input, select, textarea, button { font-family:"NSKR-R", 돋움, Dotum, sans-serif; vertical-align:middle; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none; -ms-appearance:none; appearance:none; -webkit-border-radius:0; -moz-border-radius:0; -o-border-radius:0; -ms-border-radius:0; border-radius:0; border:0; background-color:transparent; outline:none; }
+input, select { vertical-align:middle; }
+input { -webkit-margin-before:0; -webkit-margin-after:0; }
+input[type="text"]::-ms-clear { display:none; width:0; height:0; }
+input[type="text"]::-ms-reveal { display:none; width:0; height:0; }
+input[type="text"]::-webkit-input-placeholder { color:#999; }
+input[type="text"]:-moz-placeholder { color:#999; }
+input[type="text"]::-moz-placeholder { color:#999; }
+input[type="text"]:placeholder-shown { color:#999; }
+
+input[type="radio"] { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+select::-ms-expand,
+input::-ms-check { display:none; }
+textarea { resize:none; }
+button, label { cursor:pointer; }
+img, legend, fieldset, button { border:0; }
+table{ width:100%; font-size:inherit; table-layout:fixed; border-collapse:collapse; border-spacing:0; }
+caption, legend { overflow:hidden; position:absolute; top:0; left:0; width:1px; height:1px; font-size:0; line-height:0; }
+

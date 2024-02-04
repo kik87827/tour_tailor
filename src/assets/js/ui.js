@@ -55,7 +55,15 @@ window.addEventListener("load", () => {
    * 레이아웃
    */
   function layoutFunc() {
-
+    const btn_topgo = document.querySelector(".btn_topgo");
+    if(!!btn_topgo){
+      btn_topgo.addEventListener("click",(e)=>{
+        e.preventDefault();
+        window.scrollTo({
+          top : 0, left : 0, behavior : "smooth"
+        })
+      });
+    }
   }
 
   /* rock */

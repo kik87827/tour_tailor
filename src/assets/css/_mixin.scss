@@ -7,18 +7,11 @@ $primary2 : #047A73;
 $secondary : #0CA99F;
 $sub_color : #F7943E;
 
-
-$tablet : 1299px;
-$mobile_large : 1023px;
-$mobile : 767px;
-$mobile_size1 : 550px;
-$mobile_size2 : 450px;
-$mobile_size3 : 374px;
-$mobile_small : 359px;
-$mobile_xsmall : 319px;
-
 $warn : #e84854;
 
+@mixin neo{
+    font-family : 'Spoqa Han Sans Neo','Noto Sans KR';
+}
 
 @function rem($value) {
     $remValue: math.div($value, 16) + rem;	

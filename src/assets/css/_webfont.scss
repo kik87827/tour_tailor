@@ -63,83 +63,89 @@
     src: local('Pretendard Thin'), url('./webfont/Pretendard-Thin.woff2') format('woff2'), url('./webfont/Pretendard-Thin.woff') format('woff');
 }
 
-
-
 @font-face {
-    font-family: 'Rubik Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Rubik Regular'), url('./webfont/Rubik-Regular.woff') format('woff');
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Spoqa Han Sans Neo Bold'),
+    url('./webfont/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+    url('./webfont/SpoqaHanSansNeo-Bold.woff') format('woff'),
+    url('./webfont/SpoqaHanSansNeo-Bold.ttf') format('truetype');
 }
 
-
 @font-face {
-    font-family: 'Rubik Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Rubik Italic'), url('./webfont/Rubik-Italic.woff') format('woff');
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    font-display: swap;
+    src: local('Spoqa Han Sans Neo Medium'),
+    url('./webfont/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+    url('./webfont/SpoqaHanSansNeo-Medium.woff') format('woff'),
+    url('./webfont/SpoqaHanSansNeo-Medium.ttf') format('truetype');
 }
 
-
 @font-face {
-    font-family: 'Rubik Light';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Rubik Light'), url('./webfont/Rubik-Light.woff') format('woff');
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Spoqa Han Sans Neo Regular'),
+    url('./webfont/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+    url('./webfont/SpoqaHanSansNeo-Regular.woff') format('woff'),
+    url('./webfont/SpoqaHanSansNeo-Regular.ttf') format('truetype');
 }
 
-
 @font-face {
-    font-family: 'Rubik Light Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Rubik Light Italic'), url('./webfont/Rubik-LightItalic.woff') format('woff');
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 300;
+    font-display: swap;
+    src: local('Spoqa Han Sans Neo Light'),
+    url('./webfont/SpoqaHanSansNeo-Light.woff2') format('woff2'),
+    url('./webfont/SpoqaHanSansNeo-Light.woff') format('woff'),
+    url('./webfont/SpoqaHanSansNeo-Light.ttf') format('truetype');
 }
 
-
 @font-face {
-    font-family: 'Rubik Medium';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Rubik Medium'), url('./webfont/Rubik-Medium.woff') format('woff');
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 100;
+    font-display: swap;
+    src: local('Spoqa Han Sans Neo Thin'),
+    url('./webfont/SpoqaHanSansNeo-Thin.woff2') format('woff2'),
+    url('./webfont/SpoqaHanSansNeo-Thin.woff') format('woff'),
+    url('./webfont/SpoqaHanSansNeo-Thin.ttf') format('truetype');
 }
 
-
 @font-face {
-    font-family: 'Rubik Medium Italic';
+    font-family: 'Noto Sans KR';
     font-style: normal;
-    font-weight: normal;
-    src: local('Rubik Medium Italic'), url('./webfont/Rubik-MediumItalic.woff') format('woff');
+    font-weight: 300;
+    src: local('Noto Sans KR'),
+        url('./webfont/NotoSans-Light.woff2') format("woff2");
 }
-
-
 @font-face {
-    font-family: 'Rubik Bold';
+    font-family: 'Noto Sans KR';
     font-style: normal;
-    font-weight: normal;
-    src: local('Rubik Bold'), url('./webfont/Rubik-Bold.woff') format('woff');
+    font-weight: 350;
+    src: local('Noto Sans KR'),
+        url('./webfont/NotoSans-DemiLight.woff2') format("woff2");
 }
-
-
 @font-face {
-    font-family: 'Rubik Bold Italic';
+    font-family: 'Noto Sans KR';
     font-style: normal;
-    font-weight: normal;
-    src: local('Rubik Bold Italic'), url('./webfont/Rubik-BoldItalic.woff') format('woff');
+    font-weight: 400;
+    src: local('Noto Sans KR'),
+        url('./webfont/NotoSans-Regular.woff') format('woff');
 }
-
-
 @font-face {
-    font-family: 'Rubik Black';
+    font-family: 'Noto Sans KR';
+    src: url('./webfont/NotoSans-Medium.woff2') format('woff2'),
+         url('./webfont/NotoSans-Medium.woff') format('woff');
     font-style: normal;
-    font-weight: normal;
-    src: local('Rubik Black'), url('./webfont/Rubik-Black.woff') format('woff');
+    font-weight: 500;
 }
-
-
 @font-face {
-    font-family: 'Rubik Black Italic';
+    font-family: 'Noto Sans KR';
+    src: url('./webfont/NotoSans-Bold.woff2') format('woff2'),
+         url('./webfont/NotoSans-Bold.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
-    font-weight: normal;
-    src: local('Rubik Black Italic'), url('./webfont/Rubik-BlackItalic.woff') format('woff');
+
 }
