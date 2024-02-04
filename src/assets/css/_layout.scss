@@ -86,7 +86,9 @@ input.input_search{height:46px;appearance: none;line-height:1;border:0;width:100
     &:hover{color:#004e9e;}
 }
 
-
+.middle_wrap{
+    &.main_wrap{}
+}
 
 .footer_wrap{}
 .footer_else_row{border-top:1px solid #e3e3e3;}
