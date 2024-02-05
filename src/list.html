@@ -43,25 +43,25 @@
                 <div class="sort_form_field_cols">
                     <ul class="sort_form_field_list">
                         <li>
-                            <a href="javascript:;" class="sort_form_item">
+                            <a href="javascript:;" class="sort_form_item" id="product_choice" data-poslayer="#layer_box_01">
                                 <i class="ico product"></i>
                                 <div class="sort_form_text">품목 선택</div>
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;" class="sort_form_item">
+                            <a href="javascript:;" class="sort_form_item" id="local_choice" data-poslayer="#layer_box_02">
                                 <i class="ico local"></i>
                                 <div class="sort_form_text">지역 선택</div>
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;" class="sort_form_item">
+                            <a href="javascript:;" class="sort_form_item" id="local_date_year" data-poslayer="#layer_box_03">
                                 <i class="ico date_year"></i>
                                 <div class="sort_form_text">개최년 선택</div>
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;" class="sort_form_item">
+                            <a href="javascript:;" class="sort_form_item" id="local_date_month" data-poslayer="#layer_box_04">
                                 <i class="ico date_month"></i>
                                 <div class="sort_form_text">개최월 선택</div>
                             </a>
@@ -203,6 +203,110 @@
             </div>
         </section>
         @@include('./include/_footer.html')
+
+         <!-- layer -->
+         <div class="poslayer_z" id="layer_box_01">
+			<div class="poslayer_titlow">
+				<p class="poslayer_tit">품목 선택</p>
+			</div>
+			<div class="poslayer_contlow">
+				<div class="pcont_w">
+					<div class="pclayer_scr_w">
+						<ul class="pclayer_vlist">
+							<li><a href="javascript:;" class="pcv_chk">품목 01</a></li>
+							<li><a href="javascript:;" class="pcv_chk">품목 02</a></li>
+							<li><a href="javascript:;" class="pcv_chk">품목 03</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="btn_psubmit_w">
+					<a href="#" class="btn_psubmit">적용</a>
+				</div>
+			</div>
+			<button type="button" class="layerclose"><span class="hdtext">닫기</span></button>
+		</div>
+        <div class="poslayer_z" id="layer_box_02">
+			<div class="poslayer_titlow">
+				<p class="poslayer_tit">지역 선택</p>
+			</div>
+			<div class="poslayer_contlow">
+				<div class="pcont_w">
+					<div class="pclayer_scr_w">
+						<ul class="pclayer_vlist">
+							<li><a href="javascript:;" class="pcv_chk">지역 01</a></li>
+							<li><a href="javascript:;" class="pcv_chk">지역 02</a></li>
+							<li><a href="javascript:;" class="pcv_chk">지역 03</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="btn_psubmit_w">
+					<a href="#" class="btn_psubmit">적용</a>
+				</div>
+			</div>
+			<button type="button" class="layerclose"><span class="hdtext">닫기</span></button>
+		</div>
+        <div class="poslayer_z" id="layer_box_03">
+			<div class="poslayer_titlow">
+				<p class="poslayer_tit">개최년 선택</p>
+			</div>
+			<div class="poslayer_contlow">
+				<div class="pcont_w">
+					<div class="pclayer_scr_w">
+                        <div class="scr_vitem">
+                            <p class="scr_vitem_title">개최년</p>
+                            <div class="scr_vitem_contents">
+                                <ul class="pclayer_vlist">
+                                    <li><a href="javascript:;" class="pcv_chk">2024년</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">2025년</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">2026년</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">2027년</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">2028년</a></li>
+                                </ul>
+                            </div>
+                        </div>
+					</div>
+				</div>
+				<div class="btn_psubmit_w">
+					<a href="#" class="btn_psubmit">적용</a>
+				</div>
+			</div>
+			<button type="button" class="layerclose"><span class="hdtext">닫기</span></button>
+		</div>
+        <div class="poslayer_z" id="layer_box_04">
+			<div class="poslayer_titlow">
+				<p class="poslayer_tit">개최월 선택</p>
+			</div>
+			<div class="poslayer_contlow">
+				<div class="pcont_w">
+					<div class="pclayer_scr_w">
+                        <div class="scr_vitem">
+                            <p class="scr_vitem_title">개최월</p>
+                            <div class="scr_vitem_contents">
+                                <ul class="pclayer_vlist">
+                                    <li><a href="javascript:;" class="pcv_chk">1월</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">2월</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">3월</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">4월</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">5월</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">6월</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">7월</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">8월</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">9월</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">10월</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">11월</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">12월</a></li>
+                                </ul>
+                            </div>
+                        </div>
+					</div>
+				</div>
+				<div class="btn_psubmit_w">
+					<a href="#" class="btn_psubmit">적용</a>
+				</div>
+			</div>
+			<button type="button" class="layerclose"><span class="hdtext">닫기</span></button>
+		</div>
+        <!-- // layer -->
     </div>
 </body>
 </html>

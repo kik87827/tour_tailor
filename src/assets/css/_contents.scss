@@ -391,7 +391,9 @@
 .board_sort_option{}
 .board_sort_emp{}
 
-.btn_control_box{}
+.btn_control_box{
+    &.type2{}
+}
 
 .list_table_wrap{}
 .list_table{
@@ -416,3 +418,99 @@
     .list_link{}
 }
 .nodata_para{}
+
+
+.board_view_block{
+    &:last-of-type{}
+}
+.board_view_title_row{}
+.board_view_title{
+    &:before{}
+}
+
+.board_view_contents{
+    > .data_table_wrap{
+        &:last-of-type{}
+    }
+}
+
+.view_title_wrap{}
+.view_title_main_row{}
+.view_title_img_cols{
+    > img{}
+}
+.view_title_text_cols{}
+
+.view_title_sub_row{}
+
+.view_title_sub_cols{
+    .btn_control_box{}
+}
+.keyword_item_group{
+    dt,
+    dd{}
+    dt{}
+    dd{}
+}
+
+.keyword_item_key{}
+
+.keyword_box_list{
+    > li{}
+}
+.keyword_box{}
+
+.view_summary_data_wrap{}
+.view_summary_long_cols{}
+.view_summary_short_cols{}
+
+.view_summary_table_wrap{}
+
+.data_table{
+    th,td{}
+    th{}
+    td{}
+}
+.data_thtext{}
+.data_tdtext{
+    &.emp{}
+    &.size2{}
+}
+
+.view_summary_img_wrap{
+    > img{}
+}
+
+.btn_summary_box_group{
+    .btn_control_box{}
+}
+
+
+.data_table_wrap{
+    .data_table{}
+}
+
+.data_hor_table{
+    thead{
+        th{
+            &:last-of-type{}
+        }
+    }
+    tbody{
+        td{
+            &:last-of-type{}
+            &.has_item{
+                .btn_data_control{}
+            }
+        }
+    }
+    .data_thtext{}
+}
+
+.btn_data_control{}
+
+.data_linkage_item_list{
+    > li{
+        img{}
+    }
+}
