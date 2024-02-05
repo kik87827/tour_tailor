@@ -3,9 +3,20 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 window.addEventListener("load", () => {
   layoutFunc();
+  commonResize();
   posLayerEvent();
 });
 
+
+function commonResize(){
+	var $window_width = 0;
+	$(window).on("resize",function(){
+		if($window_width == $(window).width()){
+			return;
+		}
+		posLayerResize();
+	}).resize();
+}
   
   /**
    * device check
@@ -206,15 +217,14 @@ function posLayerEvent(){
 		e.preventDefault();
 		let thisParent = $(this).parents(".poslayer_z");
 		let targetCols = $(`[data-poslayer='#${thisParent.attr("id")}']`);
-		let activeDate = thisParent.attr("data-date");
-		let activeText = thisParent.find(".pclayer_vlist > li.active").text();
-		if(thisParent.attr("data-date") !== undefined){
-			targetCols.find(".search_form_text_result").html(activeDate);
-			targetCols.addClass("result_mode");
-		}else{
-			targetCols.find(".search_form_text_result").html(activeText);
-			targetCols.addClass("result_mode");
-		}
+		let activeItem = thisParent.find(".pclayer_vlist > li.active");
+    let activeItemArray = [];
+    activeItem.each(function(item){
+      activeItemArray.push($(this).text());
+    });
+    targetCols.find(".mv_form_text").html(activeItemArray.join(' '));
+		targetCols.addClass("result_mode");
+    console.log(thisParent.find(".pclayer_vlist > li.active"));
 		posLayerHide(thisParent);
 	});
 
@@ -264,18 +274,25 @@ function posLayerPos(target,btn){
 	var $btnWid = $btn.length ? $btn.outerWidth() : 0;
 	var elseMargin = 0;
 	$target.css({"top":"", "left" : "" , "right" : "" , "width" : ""});
-	if ($targetWid + $btnPosLeft > $(window).width()){
+	/* if ($targetWid + $btnPosLeft > $(window).width()){
 		$target.css({
-			"top": $btnPosTop + $btnPosHeight + 20,
+			"top": $btnPosTop + $btnPosHeight + 10,
 			"left": "auto",
-			"right" : 20
+			"right" : 20,
+      "width" : $btnWid
 		});
 	}else{
 		$target.css({
-			"top": $btnPosTop + $btnPosHeight + 20,
-			"left": $btnPosLeft
+			"top": $btnPosTop + $btnPosHeight + 10,
+			"left": $btnPosLeft,
+      "width" : $btnWid
 		});
-	}
+	} */
+  $target.css({
+    "top": $btnPosTop + $btnPosHeight + 10,
+    "left": $btnPosLeft,
+    "width" : $btnWid
+  });
 }
 
 function posLayerResizeAction(target){
@@ -291,18 +308,25 @@ function posLayerResizeAction(target){
 	var $btnPosLeft = $btn.length ? $btn.offset().left : 0;
 	var $btnWid = $btn.length ? $btn.outerWidth() : 0;
 	$target.css({"top":"", "left" : "" , "right" : "" , "width" : ""});
-	if ($targetWid + $btnPosLeft > $(window).width()) {
+	/* if ($targetWid + $btnPosLeft > $(window).width()) {
 		$target.css({
-			"top": $btnPosTop + $btnPosHeight + 20,
+			"top": $btnPosTop + $btnPosHeight + 10,
 			"left": "auto",
-			"right": 20
+			"right": 20,
+      "width" : $btnWid
 		});
 	} else {
 		$target.css({
-			"top": $btnPosTop + $btnPosHeight + 20,
-			"left": $btnPosLeft
+			"top": $btnPosTop + $btnPosHeight + 10,
+			"left": $btnPosLeft,
+      "width" : $btnWid
 		});
-	}
+	} */
+  $target.css({
+    "top": $btnPosTop + $btnPosHeight + 10,
+    "left": $btnPosLeft,
+    "width" : $btnWid
+  });
 }
 
 function posLayerHide(target){

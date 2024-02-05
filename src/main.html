@@ -81,7 +81,7 @@
                         <div class="column_contents">
                             <div class="column_box_list_wrap">
                                 <ul class="column_box_list">
-                                    @@include('./include/data.html')
+                                    @@include('data.html')
                                 </ul>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                         <div class="column_title_row"><p class="local_title">베스트 박람회</p></div>
                         <div class="column_contents">
                             <ul class="column_box_list">
-                                @@include('./include/data.html')
+                                @@include('data.html')
                             </ul>
                         </div>
                     </div>
@@ -311,6 +311,12 @@
         </section>
         @@include('./include/_footer.html')
 
+        <script>
+            window.addEventListener("DOMContentLoaded",()=>{
+                mvSlider();
+            })
+        </script>
+
 
         <!-- layer -->
         <div class="poslayer_z" id="layer_box_01">
@@ -324,6 +330,9 @@
 							<li><a href="javascript:;" class="pcv_chk">품목 01</a></li>
 							<li><a href="javascript:;" class="pcv_chk">품목 02</a></li>
 							<li><a href="javascript:;" class="pcv_chk">품목 03</a></li>
+							<li><a href="javascript:;" class="pcv_chk">품목 04</a></li>
+							<li><a href="javascript:;" class="pcv_chk">품목 05</a></li>
+							<li><a href="javascript:;" class="pcv_chk">품목 06</a></li>
 						</ul>
 					</div>
 				</div>
@@ -344,6 +353,9 @@
 							<li><a href="javascript:;" class="pcv_chk">지역 01</a></li>
 							<li><a href="javascript:;" class="pcv_chk">지역 02</a></li>
 							<li><a href="javascript:;" class="pcv_chk">지역 03</a></li>
+							<li><a href="javascript:;" class="pcv_chk">지역 04</a></li>
+							<li><a href="javascript:;" class="pcv_chk">지역 05</a></li>
+							<li><a href="javascript:;" class="pcv_chk">지역 06</a></li>
 						</ul>
 					</div>
 				</div>
@@ -369,6 +381,7 @@
                                     <li><a href="javascript:;" class="pcv_chk">2026년</a></li>
                                     <li><a href="javascript:;" class="pcv_chk">2027년</a></li>
                                     <li><a href="javascript:;" class="pcv_chk">2028년</a></li>
+                                    <li><a href="javascript:;" class="pcv_chk">2029년</a></li>
                                 </ul>
                             </div>
                         </div>
