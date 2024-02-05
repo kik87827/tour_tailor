@@ -222,7 +222,7 @@ function posLayerEvent(){
     activeItem.each(function(item){
       activeItemArray.push($(this).text());
     });
-    targetCols.find(".mv_form_text").html(activeItemArray.join(' '));
+    targetCols.find(".mv_form_text,.sort_form_text").html(activeItemArray.join(' '));
 		targetCols.addClass("result_mode");
     console.log(thisParent.find(".pclayer_vlist > li.active"));
 		posLayerHide(thisParent);
@@ -272,7 +272,7 @@ function posLayerPos(target,btn){
 	var $btnPosHeight = $btn.length ? $btn.outerHeight() : 0;
 	var $btnPosLeft = $btn.length ? $btn.offset().left : 0;
 	var $btnWid = $btn.length ? $btn.outerWidth() : 0;
-	var elseMargin = 0;
+	var elseMargin = 10;
 	$target.css({"top":"", "left" : "" , "right" : "" , "width" : ""});
 	/* if ($targetWid + $btnPosLeft > $(window).width()){
 		$target.css({
@@ -288,8 +288,11 @@ function posLayerPos(target,btn){
       "width" : $btnWid
 		});
 	} */
+  if($target.hasClass("postype2")){
+    elseMargin = 0;
+  }
   $target.css({
-    "top": $btnPosTop + $btnPosHeight + 10,
+    "top": $btnPosTop + $btnPosHeight + elseMargin,
     "left": $btnPosLeft,
     "width" : $btnWid
   });
@@ -307,6 +310,7 @@ function posLayerResizeAction(target){
 	var $btnPosHeight = $btn.length ? $btn.outerHeight() : 0;
 	var $btnPosLeft = $btn.length ? $btn.offset().left : 0;
 	var $btnWid = $btn.length ? $btn.outerWidth() : 0;
+  var elseMargin = 10;
 	$target.css({"top":"", "left" : "" , "right" : "" , "width" : ""});
 	/* if ($targetWid + $btnPosLeft > $(window).width()) {
 		$target.css({
@@ -322,8 +326,11 @@ function posLayerResizeAction(target){
       "width" : $btnWid
 		});
 	} */
+  if($target.hasClass("postype2")){
+    elseMargin = 0;
+  }
   $target.css({
-    "top": $btnPosTop + $btnPosHeight + 10,
+    "top": $btnPosTop + $btnPosHeight + elseMargin,
     "left": $btnPosLeft,
     "width" : $btnWid
   });
@@ -332,4 +339,33 @@ function posLayerResizeAction(target){
 function posLayerHide(target){
 	var target = $(target) || target;
 	target.removeClass("active");
+}
+
+
+
+function boardSortFunc(){
+  const board_sort_bar = document.querySelectorAll(".board_sort_bar");
+  const board_sort_option = document.querySelectorAll(".board_sort_option");
+  if(!!board_sort_bar){
+    board_sort_bar.forEach((item)=>{
+      item.addEventListener("click",(e)=>{
+        e.preventDefault();
+        const thisItem = e.currentTarget;
+        const thisParent = thisItem.closest(".board_sort_item");
+        thisParent.classList.toggle("active");
+      });
+    });
+  }
+  if(!!board_sort_option){
+    board_sort_option.forEach((item)=>{
+      item.addEventListener("click",(e)=>{
+        e.preventDefault();
+        const thisItem = e.currentTarget;
+        const thisParent = thisItem.closest(".board_sort_item");
+        const thisTarget = thisParent.querySelector(".board_sort_bar");
+        thisTarget.innerHTML = thisItem.innerHTML;
+        thisParent.classList.remove("active");
+      });
+    });
+  }
 }
