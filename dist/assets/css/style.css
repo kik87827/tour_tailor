@@ -4212,8 +4212,22 @@ button.swiper-pagination-bullet {
 .sort_form_item {
   display: flex;
   align-items: center;
-  padding: 15px 0;
+  padding: 15px 40px 15px 0;
   gap: 8px;
+  position: relative;
+}
+.sort_form_item:after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid #c1c1c1;
+  border-top: 1px solid #c1c1c1;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: rotate(225deg);
+  margin-top: -8px;
 }
 .sort_form_item .ico {
   width: 36px;
@@ -4246,7 +4260,6 @@ button.swiper-pagination-bullet {
 .list_board_zone {
   width: 1200px;
   margin: 0 auto;
-  padding-top: 50px;
 }
 
 .list_top_row {
