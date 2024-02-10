@@ -76,6 +76,23 @@ function commonResize(){
         })
       });
     }
+
+    function gnbTotalMenu(){
+      const header_wrap = document.querySelector(".header_wrap");
+      const btn_header_total = document.querySelector(".btn_header_total");
+      const global_menu_layer = document.querySelector(".global_menu_layer");
+      if(btn_header_total === null || global_menu_layer === null){return;}
+  
+  
+      header_wrap.addEventListener("mouseleave",()=>{
+        global_menu_layer.classList.remove("active");
+      });
+  
+      btn_header_total.addEventListener("click",()=>{
+        global_menu_layer.classList.toggle("active");
+      });
+    }
+    gnbTotalMenu();
   }
 
   /* rock */
