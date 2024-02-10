@@ -241,7 +241,6 @@ function posLayerEvent(){
     });
     targetCols.find(".mv_form_text,.sort_form_text").html(activeItemArray.join(' '));
 		targetCols.addClass("result_mode");
-    console.log(thisParent.find(".pclayer_vlist > li.active"));
 		posLayerHide(thisParent);
 	});
 
@@ -249,6 +248,13 @@ function posLayerEvent(){
 		e.preventDefault();
 		$(this).parents("li").siblings().removeClass("active");
 		$(this).parents("li").addClass("active");
+	});
+	$(document).on("click",".option_item",function(e){
+		e.preventDefault();
+    let thisParent = $(this).parents(".poslayer_z");
+		let targetCols = $(`[data-poslayer='#${thisParent.attr("id")}']`);
+    targetCols.find(".mv_form_text,.sort_form_text").html($(this).text());
+    posLayerHide($(".poslayer_z.active"));
 	});
 
 	$(document).on("click",function(e){
@@ -308,11 +314,34 @@ function posLayerPos(target,btn){
   if($target.hasClass("postype2")){
     elseMargin = 0;
   }
-  $target.css({
-    "top": $btnPosTop + $btnPosHeight + elseMargin,
-    "left": $btnPosLeft,
-    "width" : $btnWid
-  });
+  if($target.hasClass("wid_type2")){
+    if ($targetWid + $btnPosLeft > $(window).width()) {
+      $target.css({
+        "top": $btnPosTop + $btnPosHeight + elseMargin,
+        "left": "auto",
+        "right": 20,
+      });
+    } else {
+      $target.css({
+        "top": $btnPosTop + $btnPosHeight + elseMargin,
+        "left": $btnPosLeft,
+      });
+    }
+  }else{
+    if($target.hasClass("wid_auto_type")){
+      $target.css({
+        "top": $btnPosTop + $btnPosHeight + elseMargin,
+        "left": $btnPosLeft,
+        "width" : $btnWid
+      });
+    }else{
+      $target.css({
+        "top": $btnPosTop + $btnPosHeight + elseMargin,
+        // "left": $btnPosLeft,
+       // "width" : $btnWid
+      });
+    }
+  }
 }
 
 function posLayerResizeAction(target){
@@ -329,28 +358,38 @@ function posLayerResizeAction(target){
 	var $btnWid = $btn.length ? $btn.outerWidth() : 0;
   var elseMargin = 10;
 	$target.css({"top":"", "left" : "" , "right" : "" , "width" : ""});
-	/* if ($targetWid + $btnPosLeft > $(window).width()) {
-		$target.css({
-			"top": $btnPosTop + $btnPosHeight + 10,
-			"left": "auto",
-			"right": 20,
-      "width" : $btnWid
-		});
-	} else {
-		$target.css({
-			"top": $btnPosTop + $btnPosHeight + 10,
-			"left": $btnPosLeft,
-      "width" : $btnWid
-		});
-	} */
+	
   if($target.hasClass("postype2")){
     elseMargin = 0;
   }
-  $target.css({
-    "top": $btnPosTop + $btnPosHeight + elseMargin,
-    "left": $btnPosLeft,
-    "width" : $btnWid
-  });
+  if($target.hasClass("wid_type2")){
+    if ($targetWid + $btnPosLeft > $(window).width()) {
+      $target.css({
+        "top": $btnPosTop + $btnPosHeight + elseMargin,
+        "left": "auto",
+        "right": 20,
+      });
+    } else {
+      $target.css({
+        "top": $btnPosTop + $btnPosHeight + elseMargin,
+        "left": $btnPosLeft,
+      });
+    }
+  }else{
+    if($target.hasClass("wid_auto_type")){
+      $target.css({
+        "top": $btnPosTop + $btnPosHeight + elseMargin,
+        "left": $btnPosLeft,
+        "width" : $btnWid
+      });
+    }else{
+      $target.css({
+        "top": $btnPosTop + $btnPosHeight + elseMargin,
+        // "left": $btnPosLeft,
+       // "width" : $btnWid
+      });
+    }
+  }
 }
 
 function posLayerHide(target){
