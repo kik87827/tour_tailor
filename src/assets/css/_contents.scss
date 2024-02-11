@@ -526,9 +526,11 @@
 .list_tdtext{font-size:16px;color:#333;display:inline-block;}
 .list_flex_wrap{
     display:flex;text-align:left; align-items: center;gap:8px;
+    .list_clamp,
     .list_link{position:relative;top:-1px;}
 }
 .keyword{display:inline-block;color:#90a6ff; font-size:14px;border:1px solid #90a6ff;border-radius:5px;padding:4px 10px 5px;white-space: nowrap;line-height:1;}
+.list_clamp{font-size:16px; @include clamp(1);line-height:1.3;color:#333;}
 .list_link{font-size:16px; @include clamp(1);line-height:1.3;color:#333;}
 .nodata_para{}
 
@@ -597,11 +599,17 @@
 
 .data_table{
     width:100%;box-sizing:border-box;
-    th,td{border:1px solid #aaafb8;padding:15px;box-sizing: border-box;line-height:1.3;}
+    th,td{border:1px solid #aaafb8;padding:20px 15px;box-sizing: border-box;line-height:1.3;}
     th{background:#ededed;}
     td{}
 }
 .data_thtext{display:inline-block;font-size:16px;color:#465268;font-weight:500;}
+.data_thtext_word_group{display:inline-flex;font-size:16px;color:#465268;font-weight:500;min-width:58px; justify-content: center; justify-content: space-between;
+    &.length_5{
+        min-width:73px;
+    }
+}
+.data_thtext_word{}
 .data_tdtext{
     color:#5b5b5b;display:inline-block;font-size:16px;
     *{
