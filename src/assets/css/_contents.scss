@@ -2,16 +2,46 @@
 
 .mv_row{background:#e8edff;padding:15px 0;}
 .mv_pixin{width:1200px;margin:0 auto; display:flex;gap:15px;}
-.mv_main_cols{flex:1;min-width:0;overflow:hidden;}
+.mv_main_cols{flex:1;min-width:0;overflow:hidden;display:flex;flex-direction: column;}
 .mv_swiper_contianer{
+    flex:1;min-height:0;min-width:0;width:100%;
     &.swiper-container{}
     &.swiper-wrapper{}
     &.swiper-slide{}
 }
 .mv_link{
-    display:block;position:relative;padding:0 0 0 1px;
+    display:block;position:relative;padding:73px 0 0 1px;height:100%; box-sizing: border-box;width:100%;
     > img{vertical-align: top;}
 }
+.mv_bg{
+    position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;
+    >img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit: cover;object-position: 50% 50%;}
+}
+.mv_cont_both{position:relative;z-index:1;display:flex;gap:15px;height:100%;min-width:0; padding:0 28px 28px;}
+.mv_cont_spec_cols{flex:1;display:flex;flex-direction: column;gap:25px;min-width:0;}
+.mv_title_group{}
+.mv_title_sub{font-size:19px;font-weight:200;color:#fff;@include clamp(1); line-height:1.3; letter-spacing: 1px;
+    & + .mv_title_main{margin-top:5px;}
+}
+.mv_title_main{font-size:39px;font-weight:500;color:#fff;@include clamp(1);}
+.mv_summary_table{display:table;width:100%;}
+.mv_summary_tr{display:table-row;
+    &:last-of-type{
+        .mv_summary_cell{padding-bottom:0;}
+    }
+}
+.mv_summary_cell{
+    display:table-cell;vertical-align:middle;padding-bottom:10px;
+    &.define_th{width:1px;padding-right:10px;}
+    &.define_td{}
+}
+.mv_summary_key{display:inline-block;font-weight:500;color:#fff;line-height:1;font-size:16px;white-space: nowrap;}
+.mv_summary_value{display:inline-block;font-weight:200;color:#fff;line-height:1;font-size:16px;@include clamp(1);}
+
+.mv_cont_img_cols{flex:0 0 252px;
+    >img{width:252px;height:165px;object-fit: cover;object-position: 50% 50%;vertical-align: top;}
+}
+
 .mv_flag{display:inline-flex;background:#ffc332;min-height:34px;align-items: center;font-weight:500;font-size:16px;color:#333333;border-radius:0 100px 100px 0;padding:0 36px 0 12px;line-height:1;position:absolute;top:13px;left:-1px;}
 
 .mv_tab_list_wrap{position:relative;z-index:5;}
